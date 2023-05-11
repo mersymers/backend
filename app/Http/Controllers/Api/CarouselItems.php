@@ -50,6 +50,8 @@ class CarouselItems extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $carouselItem = CarouselItemsModel::findOrFail($id);
+        $carouselItem->delete();
+        return carouselItem;
     }
 }
