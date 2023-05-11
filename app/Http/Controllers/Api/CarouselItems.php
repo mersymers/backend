@@ -15,15 +15,10 @@ class CarouselItems extends Controller
     public function index()
     {
         return CarouselItemsModel::all();
+        
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -38,16 +33,9 @@ class CarouselItems extends Controller
      */
     public function show(string $id)
     {
-        //
+        return CarouselItemsModel::findOrFail($id);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
